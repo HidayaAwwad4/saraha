@@ -1,6 +1,5 @@
-import { connection } from 'mongoose';
+import connectDb  from '../DB/connection.js';
 import authRouter from './Modules/auth/auth.router.js';
-import connectDb from '../DB/connection.js';
 const initApp = (app,express)=>{
     connectDb();
     app.use(express.json());
@@ -9,3 +8,4 @@ const initApp = (app,express)=>{
         return res.status(404).json({message:"page not fount"});
     });
 }
+export default initApp;
