@@ -1,7 +1,6 @@
 import userModel from "../../../DB/models/User.model.js";
 import bcrypt from "bcryptjs/dist/bcrypt.js";
 import jwt from "jsonwebtoken";
-import { registerSchema } from "./auth.validation.js";
 import { sendEmail } from "../../Utils/SendEmail.js";
 
 export const register = async (req,res)=>{
